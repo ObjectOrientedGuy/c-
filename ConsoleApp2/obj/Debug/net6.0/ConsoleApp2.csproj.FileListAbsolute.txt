@@ -1,0 +1,17 @@
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/bin/Debug/net6.0/ConsoleApp2
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/bin/Debug/net6.0/ConsoleApp2.deps.json
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/bin/Debug/net6.0/ConsoleApp2.runtimeconfig.json
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/bin/Debug/net6.0/ConsoleApp2.dll
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/bin/Debug/net6.0/ref/ConsoleApp2.dll
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/bin/Debug/net6.0/ConsoleApp2.pdb
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.csproj.AssemblyReference.cache
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.AssemblyInfoInputs.cache
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.AssemblyInfo.cs
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.csproj.CoreCompileInputs.cache
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.dll
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ref/ConsoleApp2.dll
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.pdb
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.genruntimeconfig.cache
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/bin/Debug/net6.0/ConsoleMenu.dll
+/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/Debug/net6.0/ConsoleApp2.csproj.CopyComplete

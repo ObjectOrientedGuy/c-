@@ -1,0 +1,99 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ConsoleMenu-simple/2.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/ConsoleMenu.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ConsoleMenu.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleMenu-simple/2.4.3": {
+      "sha512": "wrjK/VTZU64eK0jXH3TAyw+omoYNrGtESk0FcdmPtCc4YhNQVEFdUgkioorS09dEPaTajRxQZU6Tg/uDl4Ofsg==",
+      "type": "package",
+      "path": "consolemenu-simple/2.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "consolemenu-simple.2.4.3.nupkg.sha512",
+        "consolemenu-simple.nuspec",
+        "lib/net5.0/ConsoleMenu.dll",
+        "lib/netstandard1.3/ConsoleMenu.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ConsoleMenu-simple >= 2.4.3"
+    ]
+  },
+  "packageFolders": {
+    "/home/game/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/ConsoleApp2.csproj",
+      "projectName": "ConsoleApp2",
+      "projectPath": "/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/ConsoleApp2.csproj",
+      "packagesPath": "/home/game/.nuget/packages/",
+      "outputPath": "/home/game/RiderProjects/ConsoleApp2/ConsoleApp2/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/game/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "ConsoleMenu-simple": {
+            "target": "Package",
+            "version": "[2.4.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

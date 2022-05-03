@@ -13,13 +13,6 @@ public class Menu
     {
         _collection = new REGISTRATION_CERTIFICATE_COLLECTION();
         
-        //var d = new REGISTRATION_CERTIFICATE("1", "ВС9909АВ","5/1/2008","4Y1SL65848Z411439","test","2007");
-        //var dq = new REGISTRATION_CERTIFICATE("2", "ВС9908АВ","5/1/2008","4Y1SL65848Z411439","TEst","2008");
-        //var dw = new REGISTRATION_CERTIFICATE("3", "ВС9907АВ","5/1/2008","4Y1SL65848Z411439","Audi","2002");
-
-        //_collection.Add(d);
-        //_collection.Add(dq);
-        //_collection.Add(dw);
         _collection.deserealizeFromFile();
         var dictionary = new Dictionary<int, Delegate>()
         {

@@ -4,9 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace ConsoleApp2;
 
-public class REGISTRATION_CERTIFICATE_COLLECTION
+public class REGISTRATION_CERTIFICATE_COLLECTION<T> where T : ICollectionItem
 {
-    private List<REGISTRATION_CERTIFICATE> _list;
+    private List<T> _list;
 
     public void  serilizeToFile()
     {
@@ -17,9 +17,9 @@ public class REGISTRATION_CERTIFICATE_COLLECTION
 
     public void deserealizeFromFile()
     {
-        List<REGISTRATION_CERTIFICATE> result = new List<REGISTRATION_CERTIFICATE>();
+        List<T> result = new List<T>();
         string json = new StreamReader("../../../data.json").ReadToEnd();
-        _list = JsonSerializer.Deserialize<List<REGISTRATION_CERTIFICATE>>(json);
+        _list = JsonSerializer.Deserialize<List<T>>(json);
         var indexToDelete = new List<int>();
         for (int i =0; i<_list.Count-1;++i)
         {
@@ -40,7 +40,7 @@ public class REGISTRATION_CERTIFICATE_COLLECTION
         }
     }
 
-    private REGISTRATION_CERTIFICATE certificateByID(int id)
+    private T ItemById(int id)
     {
         foreach (var certificate in _list)
         {
@@ -48,18 +48,18 @@ public class REGISTRATION_CERTIFICATE_COLLECTION
                 return certificate;
         }
 
-        return null;
+        return default(T);
     }
 
     public REGISTRATION_CERTIFICATE_COLLECTION()
     {
-        _list = new List<REGISTRATION_CERTIFICATE>();
+        _list = new List<T>();
     }
 
 
-    public List<REGISTRATION_CERTIFICATE> searchByValue(string value)
+    public List<T> searchByValue(string value)
     {
-        var result = new List<REGISTRATION_CERTIFICATE>();
+        var result = new List<T>();
         foreach (var item in _list)
         {
             foreach (var field in item.GetType().GetProperties())
@@ -109,12 +109,11 @@ public class REGISTRATION_CERTIFICATE_COLLECTION
 
         return true;
     }
-    public void Add(REGISTRATION_CERTIFICATE certificate)
+    public void Add(T certificate)
     {
         if (!checkIfIdIsUnique(certificate._id))
         {
-            Console.WriteLine("You have registration certificate with the same ID");
-            return;
+            throw new Exception("You have item with the same id");
         }
         _list.Add(certificate);
         serilizeToFile();
@@ -122,13 +121,13 @@ public class REGISTRATION_CERTIFICATE_COLLECTION
 
     public void Remove(int index)
     {
-        _list.Remove(certificateByID(index));
+        _list.Remove(ItemById(index));
         serilizeToFile();
     }
 
     public void Edit(int index)
     {
-        REGISTRATION_CERTIFICATE foundCertificate = null;
+        T foundCertificate = default(T);
         foreach (var _certificate in _list)
         {
             if (_certificate._id == index)

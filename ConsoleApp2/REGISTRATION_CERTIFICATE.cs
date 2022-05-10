@@ -2,7 +2,7 @@ using System.Reflection;
 
 namespace ConsoleApp2;
 
-public class REGISTRATION_CERTIFICATE
+public class REGISTRATION_CERTIFICATE: ICollectionItem
 {
     public int _id{ get; set;}
     public string _registration_number{ get; set; }
@@ -40,12 +40,12 @@ public class REGISTRATION_CERTIFICATE
         Set_year_of_manufacture(yearOfCar);
     }
 
+    
     public void Set_id(string idStr)
     {
         var id = Convert.ToInt32(idStr);
-            _id = Validation.ValidateId(id);
+        _id = Validation.ValidateId(id);
     }
-
     public void Set_registration_number(string number)
     {
 

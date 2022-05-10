@@ -8,10 +8,10 @@ using ConsoleTools;
 
 public class Menu
 {
-    private REGISTRATION_CERTIFICATE_COLLECTION _collection;
+    private REGISTRATION_CERTIFICATE_COLLECTION<REGISTRATION_CERTIFICATE> _collection;
     public Menu()
     {
-        _collection = new REGISTRATION_CERTIFICATE_COLLECTION();
+        _collection = new REGISTRATION_CERTIFICATE_COLLECTION<REGISTRATION_CERTIFICATE>();
         
         _collection.deserealizeFromFile();
         var dictionary = new Dictionary<int, Delegate>()
@@ -88,8 +88,17 @@ public class Menu
     private void Add()
     {
         var certificate = REGISTRATION_CERTIFICATE.readFromConsole();
-        _collection.Add(certificate);
-        Console.Write(_collection);
+        try
+        {
+            _collection.Add(certificate);
+            Console.Write(_collection);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        
+        
     }
 
     private void Remove()
